@@ -54,9 +54,7 @@ class ContactList(QMainWindow):
 
     @Slot()
     def __on_add_contact(self):
-        """
-        
-        """
+        """Functionality to add contacts"""
         name = self.contact_name_input.text()
         phone = self.phone_input.text()
         if len(name.strip()) > 0 and len(phone.strip()) > 0:
@@ -72,6 +70,7 @@ class ContactList(QMainWindow):
 
     @Slot()
     def __on_remove_contact(self):
+        """functionality to remove contacts"""
         row = self.contact_table.currentRow()
         if row >= 0:
             question = QMessageBox.question(self, "Remove Contact", "Are you sure you want to remove the selected contact?")
